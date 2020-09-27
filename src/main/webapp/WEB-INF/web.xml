@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>highschool_book_tracking</display-name>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>UserLoginServlet</display-name>
+    	<servlet-name>UserLoginServlet</servlet-name>
+    	<servlet-class>edu.book_tracking.controller.UserLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>UserLoginServlet</servlet-name>
+    	<url-pattern>/UserLoginServlet</url-pattern>
+    </servlet-mapping>
+
+	<servlet>
+		<servlet-name>BookSearchServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.SearchBook</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>SearchBookServlet</display-name>
+		<servlet-name>SearchBookServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.SearchBook</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>BookCheckoutServlet</display-name>
+		<servlet-name>BookCheckoutServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.BookCheckout</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>DisplayUserAccessLevelServlet</display-name>
+		<servlet-name>DisplayUserAccessLevelServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.DisplayUserAccessLevel</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>BookOrderDetailsServlet</display-name>
+		<servlet-name>BookOrderDetailsServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.BookOrderDetails</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+		</description>
+
+		<display-name>BookReturnServlet</display-name>
+		<servlet-name>BookReturnServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.BookReturn</servlet-class>
+	</servlet>
+
+	<servlet>
+		<display-name>BookCheckoutByBooknameServlet</display-name>
+		<servlet-name>BookCheckoutByBooknameServlet</servlet-name>
+		<servlet-class>edu.book_tracking.controller.BookCheckoutByBookname</servlet-class>
+	</servlet>
+	
+
+	<servlet-mapping>
+		<servlet-name>BookSearchServlet</servlet-name>
+		<url-pattern>/BookSearchServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SearchBookServlet</servlet-name>
+		<url-pattern>/SearchBookServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookCheckoutServlet</servlet-name>
+		<url-pattern>/BookCheckoutServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookOrderDetailsServlet</servlet-name>
+		<url-pattern>/BookOrderDetailsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookReturnServlet</servlet-name>
+		<url-pattern>/BookReturnServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>BookCheckoutByBooknameServlet</servlet-name>
+		<url-pattern>/BookCheckoutByBooknameServlet</url-pattern>
+	</servlet-mapping>
+
+
+
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+        </welcome-file-list>
+    </web-app>
